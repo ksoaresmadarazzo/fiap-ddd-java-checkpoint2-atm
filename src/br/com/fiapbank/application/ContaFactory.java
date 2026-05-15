@@ -1,4 +1,4 @@
 package br.com.fiapbank.application;
 
-public class CriadorDeConta {
+public class ContaFactory {
 }
