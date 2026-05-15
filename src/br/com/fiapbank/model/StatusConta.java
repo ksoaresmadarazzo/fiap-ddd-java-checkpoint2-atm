@@ -1,4 +1,7 @@
 package br.com.fiapbank.model;
 
-public class StatusConta {
+public enum StatusConta {
+    Ativa,
+    Bloqueada,
+    Encerrada
 }

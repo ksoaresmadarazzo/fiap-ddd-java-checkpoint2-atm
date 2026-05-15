@@ -1,4 +1,8 @@
 package br.com.fiapbank.model;
 
-public class TipoMovimentacao {
+public enum TipoMovimentacao {
+    Deposito,
+    Saque,
+    Taxa,
+    Rendimento
 }
