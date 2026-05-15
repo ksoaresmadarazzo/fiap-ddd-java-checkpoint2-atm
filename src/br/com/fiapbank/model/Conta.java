@@ -28,7 +28,7 @@ public abstract class Conta extends BaseEntity {
 
     public void realizarSaque(Dinheiro valor) {
         if (valor.getValor().compareTo(java.math.BigDecimal.ZERO) <= 0)
-            throw new IllegalArgumentException("Valor de saque invalido.");
+            throw new IllegalArgumentException("Valor de saque deve ser maior que zero.");
         if (valor.maiorQue(saldo))
             throw new IllegalArgumentException("Saldo insuficiente.");
         saldo = saldo.subtrair(valor);
@@ -38,7 +38,7 @@ public abstract class Conta extends BaseEntity {
 
     public void realizarDeposito(Dinheiro valor) {
         if (valor.getValor().compareTo(java.math.BigDecimal.ZERO) <= 0)
-            throw new IllegalArgumentException("Valor de deposito invalido.");
+            throw new IllegalArgumentException("Valor de deposito de deve ser maior que zero.");
         saldo = saldo.somar(valor);
         registrarMovimentacao(valor, TipoMovimentacao.Deposito);
     }
