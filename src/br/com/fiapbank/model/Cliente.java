@@ -12,7 +12,8 @@ public class Cliente extends BaseEntity {
     public String getNomeCompleto() { return nomeCompleto; }
 
     public String obterPrimeiroNome() {
-        return nomeCompleto.trim().split(" ")[0];
+        String nome = nomeCompleto.trim().split(" ")[0];
+        return nome.substring(0, 1).toUpperCase() + nome.substring(1).toLowerCase();
     }
 
     @Override
